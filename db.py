@@ -7,7 +7,7 @@ def get_db_connection():
         dbname="Songblood",
         user="neondb_owner",
         password="npg_xgumJZ2hq4CE",
-        host="your-neondb-host.neon.tech",
+        host="ep-bitter-salad-a1zshodz-pooler.ap-southeast-1.aws.neon.tech",
         port="5432",
         sslmode="require"
     )
