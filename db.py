@@ -1,0 +1,30 @@
+# db.py
+import psycopg2
+from psycopg2 import sql
+
+def get_db_connection():
+    return psycopg2.connect(
+        dbname="Songblood",
+        user="neondb_owner",
+        password="npg_xgumJZ2hq4CE",
+        host="your-neondb-host.neon.tech",
+        port="5432",
+        sslmode="require"
+    )
+
+def fetch_data(query, params=None):
+    conn = get_db_connection()
+    cur = conn.cursor()
+    cur.execute(query, params or ())
+    data = cur.fetchall()
+    cur.close()
+    conn.close()
+    return data
+
+def execute_query(query, params=None):
+    conn = get_db_connection()
+    cur = conn.cursor()
+    cur.execute(query, params or ())
+    conn.commit()
+    cur.close()
+    conn.close()
