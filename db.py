@@ -4,7 +4,7 @@ from psycopg2 import sql
 
 def get_db_connection():
     return psycopg2.connect(
-        dbname="Songblood",
+        dbname="neondb",
         user="neondb_owner",
         password="npg_xgumJZ2hq4CE",
         host="ep-bitter-salad-a1zshodz-pooler.ap-southeast-1.aws.neon.tech",
